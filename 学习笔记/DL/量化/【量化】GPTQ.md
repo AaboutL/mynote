@@ -39,7 +39,7 @@ $w_q$ 为 w 中第 q 个元素；
 $$E(w_c) = \frac{1}{2}\delta_w H \delta_w^T \tag{6}$$
 这个约束的意思是 固定被量化的值，调整其他没有量化的值。
 引入拉格朗日乘子转化为无约束问题，即求解一下函数的鞍点：
-$$L = \frac{1}{2}\delta_w H \delta_w^T + \lambda(\delta_w e_q^T + (quant(w)-w)_q) \tag{7}$$
+$$L = \frac{1}{2}\delta_w H \delta_w^T + \lambda(\delta_w e_q^T + (quant(w)-w_q) \tag{7}$$
 对$\delta_w$ 求导的：
 $$\frac{\partial L}{\partial \delta_w} = \delta_w H + \lambda e_q = 0 \tag{8}$$
 得到$\delta_w = -\lambda e_q H^{-1}$ ，带入约束条件，得到：
